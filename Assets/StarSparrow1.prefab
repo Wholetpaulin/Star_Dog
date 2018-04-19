@@ -96,3 +96,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 13
   xRange: 7
+  positionPitchFactor: -5
+  controlPitchFactor: -18

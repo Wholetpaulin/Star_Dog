@@ -8,6 +8,12 @@ public class Player : MonoBehaviour {
     [Tooltip("In ms^-1")] [SerializeField] float speed = 13f;
     [Tooltip("In m")] [SerializeField] float xRange = 7.25f;
 
+    [SerializeField] float positionPitchFactor = -5f;
+    [SerializeField] float positionYawFactor = 5f;
+    [SerializeField] float controlPitchFactor = -14f;
+
+    float xThrow, yThrow;
+
     void Start () {
 		
 	}
@@ -19,8 +25,8 @@ public class Player : MonoBehaviour {
 
     private void ProcessTranslation()
     {
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal"); // This is slowly moving away from +/- 1
-        float yThrow = CrossPlatformInputManager.GetAxis("Vertical"); // This is slowly moving away from +/- 1
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal"); // This is slowly moving away from +/- 1
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical"); // This is slowly moving away from +/- 1
         float xOffset = xThrow * speed * Time.deltaTime;
         float yOffset = yThrow * speed * Time.deltaTime;
         float rawXPos = transform.localPosition.x + xOffset;
@@ -31,6 +37,9 @@ public class Player : MonoBehaviour {
 
     private void ProcessRotation()
     {
-        transform.localRotation = Quaternion.Euler(90f, 0f, 0f); // in our case x is pitch y is yaw z is roll
+        float pitch = transform.localPosition.y * positionPitchFactor + yThrow * controlPitchFactor;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xThrow * controlPitchFactor;
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll); // in our case x is pitch y is yaw z is roll
     }
 }
