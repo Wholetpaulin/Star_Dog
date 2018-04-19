@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
         float rawXPos = transform.localPosition.x + xOffset;
         float rawYPos = transform.localPosition.y + yOffset;
 
-        transform.localPosition = new Vector3(Mathf.Clamp(rawXPos, -xRange, xRange), Mathf.Clamp(rawYPos, -5f, 4.5f), transform.localPosition.z);
+        transform.localPosition = new Vector3(Mathf.Clamp(rawXPos, -xRange, xRange), Mathf.Clamp(rawYPos, -5f, 5f), transform.localPosition.z);
     }
 
     private void ProcessRotation()
