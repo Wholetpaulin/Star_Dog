@@ -3,30 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour {
+//todo: find out why scene starts lit the first time.
 
+public class PlayerController : MonoBehaviour {
+
+    [Header("General")]
     [Tooltip("In ms^-1")] [SerializeField] float speed = 13f;
     [Tooltip("In m")] [SerializeField] float xRange = 7.25f;
 
+    [Header("Screen Position")]
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float positionYawFactor = 5f;
+
+    [Header("Control Throw")]
     [SerializeField] float controlPitchFactor = -14f;
 
     float xThrow, yThrow;
-
-    void Start () {
-		
-	}
+    bool isControlEnabled = true;
 	
 	void Update () {
-        ProcessTranslation();
-        ProcessRotation();      // Lets get the ship to rotate sidewys
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();      // Lets get the ship to rotate sidewys
+        }
 	}
-
-    private void OnTriggerEnter(Collider other)
-    {
-        print("player triggered something.");
-    }
 
     private void ProcessTranslation()
     {
@@ -46,5 +47,12 @@ public class Player : MonoBehaviour {
         float yaw = transform.localPosition.x * positionYawFactor;
         float roll = xThrow * controlPitchFactor;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll); // in our case x is pitch y is yaw z is roll
+    }
+
+
+    private void OnPlayerDeath()    // called by string reference!!
+    {
+        print("Controls frozen!"); // freze dat boi
+        isControlEnabled = false;
     }
 }
