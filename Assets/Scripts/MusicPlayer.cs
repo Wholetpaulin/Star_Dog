@@ -14,7 +14,15 @@ public class MusicPlayer : MonoBehaviour {
 	// Awake is called b4 Start()
 	void Awake ()
     {
-        DontDestroyOnLoad(this.gameObject);
+        int numMusicPlayers = FindObjectsOfType<MusicPlayer>().Length;
+        if (numMusicPlayers > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     void LoadFirstScene()
