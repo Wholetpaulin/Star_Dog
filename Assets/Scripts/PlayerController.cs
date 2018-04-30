@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Control Throw")]
     [SerializeField] float controlPitchFactor = -14f;
+    [SerializeField] GameObject[] guns;
 
     float xThrow, yThrow;
     bool isControlEnabled = true;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour {
         {
             ProcessTranslation();
             ProcessRotation();      // Lets get the ship to rotate sidewys
+            ProcessFiring();
         }
 	}
 
@@ -53,5 +55,33 @@ public class PlayerController : MonoBehaviour {
     private void OnPlayerDeath()    // called by string reference!!
     {
         isControlEnabled = false;
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire1"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
     }
 }

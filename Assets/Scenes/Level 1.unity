@@ -7314,6 +7314,9 @@ MonoBehaviour:
   positionPitchFactor: -5
   positionYawFactor: 5
   controlPitchFactor: -14
+  guns:
+  - {fileID: 1447153099}
+  - {fileID: 441680959}
 --- !u!65 &555738557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7772,7 +7775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1822d7a52ac9780429a00a55007fc3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreHit: 12
 --- !u!1 &1190883737
 GameObject:
   m_ObjectHideFlags: 0
