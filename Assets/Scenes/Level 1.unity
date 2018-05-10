@@ -8215,6 +8215,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118544903}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1143715528 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1341101396026360, guid: dcfb4ce8be0991d41ac6c0e7032828cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1827961495}
+--- !u!95 &1143715529
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143715528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!320 &1143715530
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143715528}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 854cb521834a786458e25a2425572da6, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114310086971932272, guid: 854cb521834a786458e25a2425572da6, type: 2}
+    value: {fileID: 1143715528}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1174557223
 GameObject:
   m_ObjectHideFlags: 0
@@ -8627,6 +8667,10 @@ Prefab:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1564901773}
+    - target: {fileID: 1879595044476162, guid: 70a63597cfa3fbc4db92198cca19809a, type: 2}
+      propertyPath: m_Name
+      value: Big boi
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65480003203826578, guid: 70a63597cfa3fbc4db92198cca19809a, type: 2}
     - {fileID: 114854019984575448, guid: 70a63597cfa3fbc4db92198cca19809a, type: 2}
@@ -12319,31 +12363,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.6
+      value: 51.3
       objectReference: {fileID: 0}
     - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.4
+      value: -22.4
       objectReference: {fileID: 0}
     - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 467
+      value: 317.5
       objectReference: {fileID: 0}
     - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.5782368
       objectReference: {fileID: 0}
     - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.81586903
       objectReference: {fileID: 0}
     - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
       propertyPath: m_RootOrder
@@ -12360,6 +12404,14 @@ Prefab:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1564901773}
+    - target: {fileID: 4348174527947628, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -70.653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341101396026360, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
+      propertyPath: m_Name
+      value: Falcon
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65391984157206786, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
     - {fileID: 114275562839822094, guid: dcfb4ce8be0991d41ac6c0e7032828cb, type: 2}
