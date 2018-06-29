@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.44117647, g: 0, b: 0, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38455003, g: 0.04879821, b: 0.0040469603, a: 1}
+  m_IndirectSpecularColor: {r: 0.38429722, g: 0.04783228, b: 0.0031296068, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '         End of demo
 
-    Thanks for playing!'
+'
 --- !u!222 &204673727
 CanvasRenderer:
   m_ObjectHideFlags: 0

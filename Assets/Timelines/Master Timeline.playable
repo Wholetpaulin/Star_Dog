@@ -1294,7 +1294,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114525237930929752}
   m_Children: []
   m_Clips:
-  - m_Start: 14.566666666666666
+  - m_Start: 15.816666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 114437676026842306}
     m_UnderlyingAsset: {fileID: 114437676026842306}
