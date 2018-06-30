@@ -7,9 +7,9 @@ This is a rail shooter with a space theme.
 
 1. Click on the designated link: https://wholetpaulin.github.io/Star_Dog/   (Wait for game to load up)
 
-2. 
+2. Steer your ship with WASD or the arrow keys
 
-3. 
+3. Shoot other starships with space 
 
 
 ### One More Thing
