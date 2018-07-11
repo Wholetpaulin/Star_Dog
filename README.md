@@ -1,7 +1,7 @@
 # Star-Dog
 This is a rail shooter with a space theme.
 
-**This project is still in early development Please check back later!**
+**This project served as a proof of concept to build and a fun skill builder. I decided not to move forward with development.**
 
 ### Instructions
 
